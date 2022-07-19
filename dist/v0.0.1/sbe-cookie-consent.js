@@ -56,7 +56,7 @@
 			yourOtherFunction: function( text ) {
 
 				// some logic
-				$( this.element ).text( text );
+				console.log(text)
 			}
 		} );
 
