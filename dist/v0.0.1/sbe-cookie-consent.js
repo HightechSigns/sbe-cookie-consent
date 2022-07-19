@@ -9,6 +9,6 @@ MIT License
     function checkCDN (){
         console.log('cdn working')
     }
-    return checkCDN()
+    checkCDN()
     // end of cdn script
 });
