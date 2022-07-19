@@ -4,16 +4,13 @@ sbe-cookie-consent v0.0.1
 Ruff Web Development
 MIT License
 */
-$(function () {
+;$(function(){
     "use strict";
-    const checkCDN = () => {
+    const checkCDN =()=>{
         console.log('cdn working')
     }
-    function chec() {
-        console.log('function 2')
-    }
+    
     // on load
-    checkCDN()
-    chec()
+        checkCDN()
     // end of cdn script
 });
