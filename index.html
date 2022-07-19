@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://use.fontawesome.com/9582c87370.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="./js.cookie.js"></script> -->
+    <title>Cookie Consent</title>
+</head>
+
+<body>
+    <!-- start of cookie consent -->
+    <div class="sbe_cookie_consent_cont">
+        <div class="sbe_cc_sec1">
+            <img src="https://www.signbuilderexpress.com/-77442822/Handler/Picture/GU/F/ThemeImages/sbe-cookie.png" alt="cookie">
+            <h3>Your Privacy</h3>
+            <p>By clicking "Accept all Cookies", you agree <strong>Sign Builder Express</strong> can store cookies on
+                your browser and disclose information in accordance with our <a
+                    href="https://www.signbuilderexpress.com/t/CookieInfo">Cookie Policy</a>.</p>
+        </div>
+        <div class="sbe_cc_sec2">
+            <button id="sbe_cc_choose_btn" class="catfish-button">Choose Settings</button>
+            <button id="sbe_cc_accpt_btn" class="catfish-button">Accept All Cookies</button>
+        </div>
+    </div>
+    <div class="sbe_cc_overlay">
+        <div class="sbe_cc_settings_cont">
+            <h2>Cookie Settings</h2>
+            <p>When you visit our website your information may get stored on your browser
+                mainly in the form of a cookie. No, these aren't edible. However, they help keep you connected with this
+                website so it can work the way you expect the next time you visit. This information allows the website
+                to provide you with a more personalized web experience. Because we at Sign Builder Express respect your
+                right to privacy, you can choose below what cookies you would like to allow and not allow. Click or tap
+                on the category headings to find out more information. Do understand that turning some of these cookies
+                off can impact how you use the site.</p>
+            <div class="sbe_cc_s_cookie_cat_cont">
+                <div class="sbe_ccsccc_block">
+                    <div class="sbe_ccscccb_toggle_sec">
+                        <h4 class="sbe_ccscccb_title" data-cccinfo="sbe-ci-sn">Strictly Necessary <i
+                                class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
+                        <label id="sbe_cc_strn_tog" class="sbe_toggle_cont">
+                            <input class="sbe_ccs_checkbox" data-cookietype="sbe-sn" type="checkbox" checked disabled>
+                            <span class="sbe_toggle sbe_toggle_round"></span>
+                        </label>
+                    </div>
+                    <div class="sbe_ccsccb_info_cont" data-cccinfo="sbe-ci-sn">
+                        <p class="sbe_ccsccb_i_para">These cookies are strictly necessary to provide you with services
+                            available through our Websites and to use some of its features, such as access to secure
+                            areas.</p>
+                    </div>
+                </div>
+                <div class="sbe_ccsccc_block">
+                    <div class="sbe_ccscccb_toggle_sec">
+                        <h4 class="sbe_ccscccb_title" data-cccinfo="sbe-ci-pc">Performance Cookies <i
+                                class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
+                        <label class="sbe_toggle_cont">
+                            <input class="sbe_ccs_checkbox" data-cookietype="sbe-pc" checked type="checkbox">
+                            <span class="sbe_toggle sbe_toggle_round"></span>
+                        </label>
+                    </div>
+                    <div class="sbe_ccsccb_info_cont" data-cccinfo="sbe-ci-pc">
+                        <p class="sbe_ccsccb_i_para">These cookies are used to enhance the performance and functionality
+                            of our Websites but are non-essential to their use. However, without these cookies, certain
+                            functionality (like videos) may become unavailable.</p>
+                    </div>
+                </div>
+                <!-- <div class="sbe_ccsccc_block">
+                    <div class="sbe_ccscccb_toggle_sec">
+                        <h4 class="sbe_ccscccb_title" data-cccinfo="sbe-ci-fc">Functional Cookies <i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
+                        <label class="sbe_toggle_cont">
+                            <input data-cookietype="sbe-sn" type="checkbox">
+                            <span class="sbe_toggle sbe_toggle_round"></span>
+                        </label>
+                    </div>
+                    <div class="sbe_ccsccb_info_cont">
+                        <p class="sbe_ccsccb_i_para"></p>
+                    </div>
+                </div> -->
+                <!-- <div class="sbe_ccsccc_block">
+                    <div class="sbe_ccscccb_toggle_sec">
+                        <h4 class="sbe_ccscccb_title" data-cccinfo="sbe-ci-tc">Targeting Cookies <i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
+                        <label class="sbe_toggle_cont">
+                            <input data-cookietype="sbe-sn" type="checkbox">
+                            <span class="sbe_toggle sbe_toggle_round"></span>
+                        </label>
+                    </div>
+                    <div class="sbe_ccsccb_info_cont">
+                        <p class="sbe_ccsccb_i_para"></p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="sbe_ccs_lower">
+                <button id="sbe_cc_confirm_btn" disabled class="catfish-button">Confirm Selection</button>
+                <button id="sbe_cc_accpt_btn_2" class="catfish-button">Accept All Cookies</button>
+            </div>
+            <div class="sbe_ccs_close_btn">
+                <div id="sbe_ccs_close_btn" class="sbe_close_btn_overlay"></div>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <!-- end of cookie consent -->
+    <script>
+        // cookie script FallBack
+        /*! js-cookie v3.0.1 | MIT */
+        function e(e) { for (var t = 1; t < arguments.length; t++) { var r = arguments[t]; for (var n in r) e[n] = r[n] } return e } var t = function t(r, n) { function o(t, o, i) { if ("undefined" != typeof document) { "number" == typeof (i = e({}, n, i)).expires && (i.expires = new Date(Date.now() + 864e5 * i.expires)), i.expires && (i.expires = i.expires.toUTCString()), t = encodeURIComponent(t).replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent).replace(/[()]/g, escape); var c = ""; for (var u in i) i[u] && (c += "; " + u, !0 !== i[u] && (c += "=" + i[u].split(";")[0])); return document.cookie = t + "=" + r.write(o, t) + c } } return Object.create({ set: o, get: function (e) { if ("undefined" != typeof document && (!arguments.length || e)) { for (var t = document.cookie ? document.cookie.split("; ") : [], n = {}, o = 0; o < t.length; o++) { var i = t[o].split("="), c = i.slice(1).join("="); try { var u = decodeURIComponent(i[0]); if (n[u] = r.read(c, u), e === u) break } catch (e) { } } return e ? n[e] : n } }, remove: function (t, r) { o(t, "", e({}, r, { expires: -1 })) }, withAttributes: function (r) { return t(this.converter, e({}, this.attributes, r)) }, withConverter: function (r) { return t(e({}, this.converter, r), this.attributes) } }, { attributes: { value: Object.freeze(n) }, converter: { value: Object.freeze(r) } }) }({ read: function (e) { return '"' === e[0] && (e = e.slice(1, -1)), e.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent) }, write: function (e) { return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g, decodeURIComponent) } }, { path: "/" }); export default t;
+    </script>
+    <script>
+        // Cookie Script minified
+        /*! js-cookie v3.0.1 | MIT */
+        !function (e, t) { "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (e = e || self, function () { var n = e.Cookies, o = e.Cookies = t(); o.noConflict = function () { return e.Cookies = n, o } }()) }(this, (function () { "use strict"; function e(e) { for (var t = 1; t < arguments.length; t++) { var n = arguments[t]; for (var o in n) e[o] = n[o] } return e } return function t(n, o) { function r(t, r, i) { if ("undefined" != typeof document) { "number" == typeof (i = e({}, o, i)).expires && (i.expires = new Date(Date.now() + 864e5 * i.expires)), i.expires && (i.expires = i.expires.toUTCString()), t = encodeURIComponent(t).replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent).replace(/[()]/g, escape); var c = ""; for (var u in i) i[u] && (c += "; " + u, !0 !== i[u] && (c += "=" + i[u].split(";")[0])); return document.cookie = t + "=" + n.write(r, t) + c } } return Object.create({ set: r, get: function (e) { if ("undefined" != typeof document && (!arguments.length || e)) { for (var t = document.cookie ? document.cookie.split("; ") : [], o = {}, r = 0; r < t.length; r++) { var i = t[r].split("="), c = i.slice(1).join("="); try { var u = decodeURIComponent(i[0]); if (o[u] = n.read(c, u), e === u) break } catch (e) { } } return e ? o[e] : o } }, remove: function (t, n) { r(t, "", e({}, n, { expires: -1 })) }, withAttributes: function (n) { return t(this.converter, e({}, this.attributes, n)) }, withConverter: function (n) { return t(e({}, this.converter, n), this.attributes) } }, { attributes: { value: Object.freeze(o) }, converter: { value: Object.freeze(n) } }) }({ read: function (e) { return '"' === e[0] && (e = e.slice(1, -1)), e.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent) }, write: function (e) { return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g, decodeURIComponent) } }, { path: "/" }) }));
+    </script>
+    <script>
+        // SBE consent settings script minified
+        /* sbe-cookie-consent | MIT */
+        const openSettingsBtnElm = $("#sbe_cc_choose_btn"), acceptAllCookiesBtnElm = $("#sbe_cc_accpt_btn"), acceptAllCookiesBtn2Elm = $("#sbe_cc_accpt_btn_2"), confirmChosenCookiesBtnElm = $("#sbe_cc_confirm_btn"), closeSettingsElm = $("#sbe_ccs_close_btn"), cookieInfoTitleBtnElm = $(".sbe_ccscccb_title"), cookieConsentPopElm = $(".sbe_cookie_consent_cont"), cookieSettingsContElm = $(".sbe_cc_overlay"), cookieInfoContElm = $(".sbe_ccsccb_info_cont"), checkboxes = $(".sbe_ccs_checkbox"); function makeId() { let b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&{}[]<>"; function a() { let a = ""; for (let c = 0; c < 15; c++)a += b[Math.floor(Math.random() * b.length - 1) + 1]; return a } return `sbe-${a()}-${a()}-${a()}` } let activeUser = { token: makeId(), cookie_settings: [{ cookie_id: "sbe-sn", cookie_active: !0 }, { cookie_id: "sbe-pc", cookie_active: !0 }], pop_open: !0 }; const cookieList = [{ c_importance: "sbe-sn", cookies: ["__RequestVerificationToken", "AWSALBCORS", "CFTDC", "HIGHTECHSIGNS.AUTH", "INF.CUST"] }, { c_importance: "sbe-pc", cookies: ["AWSALB", "INF.RecentlyViewedProducts"] }], filterCookieListAndDelete = a => { cookieList.filter(b => b.c_importance === a)[0].cookies.forEach(a => { try { Cookies.remove(a, { path: "/", domain: "www.signbuilderexpress.com" }) } catch (b) { console.log("Could not remove cookie: " + a) } }) }, setCookies = a => { a.cookie_settings.forEach(a => { a.cookie_active || filterCookieListAndDelete(a.cookie_id) }) }, foundUserAction = a => { if (a.pop_open) var b = setTimeout(() => { cookieConsentPopElm.fadeIn(), clearTimeout(b) }, 1500); cookieConsentPopElm.hide(), setCookies(a) }, openCookieSettings = () => { cookieSettingsContElm.fadeIn() }, openCookieInfo = a => { Array.from(cookieInfoContElm).forEach(b => { b.dataset.cccinfo === a ? $(b).slideToggle() : $(b).slideUp() }) }, closePops = () => { var a = setTimeout(() => { cookieConsentPopElm.fadeOut(), cookieSettingsContElm.fadeOut(), clearTimeout(a) }, 1500) }, checkCheckBoxes = (a, b) => { activeUser.cookie_settings.forEach(c => { c.cookie_id === b && (c.cookie_active = $(a).is(":checked")) }) }, setUserPopClosed = () => { activeUser.pop_open = !1 }, setUser = () => { localStorage.setItem("sbe_user_cookie_settings", JSON.stringify(activeUser)) }, checkUserAndSubmit = a => { a || activeUser.cookie_settings.forEach(a => { a.cookie_active = !0 }), setUserPopClosed(), setUser(), setCookies(activeUser), closePops() }; $(function () { if (cookieConsentPopElm.hide(), cookieSettingsContElm.hide(), cookieInfoContElm.hide(), void 0 == localStorage.getItem("sbe_user_cookie_settings")) var a = setTimeout(() => { cookieConsentPopElm.fadeIn(), clearTimeout(a) }, 1500); else foundUserAction(JSON.parse(localStorage.getItem("sbe_user_cookie_settings"))); openSettingsBtnElm.on("click", a => { a.preventDefault(), openCookieSettings() }), closeSettingsElm.on("click", a => { a.preventDefault(), cookieSettingsContElm.fadeOut() }), cookieInfoTitleBtnElm.on("click", a => { openCookieInfo(a.target.dataset.cccinfo) }), checkboxes.on("change", b => { let a = b.target, c = a.dataset.cookietype; checkCheckBoxes(a, c), confirmChosenCookiesBtnElm.removeAttr("disabled") }), acceptAllCookiesBtnElm.on("click", a => { a.preventDefault(), checkUserAndSubmit(!1) }), acceptAllCookiesBtn2Elm.on("click", a => { a.preventDefault(), checkUserAndSubmit(!1) }), confirmChosenCookiesBtnElm.on("click", a => { a.preventDefault(), checkUserAndSubmit(!0) }) })
+    </script>
+    <script src="./assets/js/productionCode.js"></script>
+</body>
+
+</html>

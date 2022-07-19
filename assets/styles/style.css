@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: arial;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+}
+
+/* catfish button */
+.catfish-button {
+    height: 2.75rem;
+    border-radius: 4px;
+    background-color: #1F9FFF;
+    border-color: transparent;
+    border-width: 1px;
+    color: #fff;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: calc(0.375em - 1px);
+    padding-bottom: calc(0.375em - 1px);
+    white-space: nowrap;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.catfish-button:hover {
+    background-color: #3588C9;
+}
+
+/* catfish button */
+/* Cookie Consent Main Container */
+.sbe_cookie_consent_cont {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    z-index: 999999;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 13px rgba(0, 0, 0, 0.16);
+    max-width: 375px;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+.sbe_cc_sec1 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.sbe_cc_sec1>img{
+    max-width: 75px;
+    margin-bottom: 10px;
+}
+.sbe_cc_sec1>h3 {
+    margin-bottom: 10px;
+}
+
+.sbe_cc_sec2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* END Cookie Consent Main Container */
+/* Cookie Settings Container and overlay */
+/* overlay */
+.sbe_cc_overlay {
+    /* for production */
+    /* display: none; */
+    /* END for production */
+    display: flex;
+    position: absolute;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px);
+    background-color: #1f9eff27;
+}
+
+.sbe_cc_settings_cont {
+    position: relative;
+    max-width: 680px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    padding: 25px;
+    line-height: 1.5;
+}
+/* close Btn */
+.sbe_ccs_close_btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 7px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
+.sbe_ccs_close_btn:hover{
+    cursor: pointer;
+    background-color: #ef3f36ba;
+    color: white;
+}
+.sbe_close_btn_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* END close Btn */
+/* Cookie settings toggle block */
+.sbe_ccscccb_toggle_sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+
+}
+.sbe_ccscccb_title {
+    cursor: pointer;
+}
+
+
+/* Toggle switch */
+.sbe_toggle_cont {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.sbe_toggle_cont input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sbe_toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.sbe_toggle:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.sbe_toggle {
+    background-color: #1F9FFF;
+}
+
+input:focus+.sbe_toggle {
+    box-shadow: 0 0 1px #1F9FFF;
+}
+
+input:checked+.sbe_toggle:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.sbe_toggle.sbe_toggle_round {
+    border-radius: 34px;
+}
+
+.sbe_toggle.sbe_toggle_round:before {
+    border-radius: 50%;
+}
+
+#sbe_cc_strn_tog:hover>* {
+    cursor: not-allowed;
+    cursor: no-drop;
+    opacity: .5;
+}
+
+/* END toggle switch */
+/* cookie category info */
+.sbe_ccsccb_info_cont{
+    /* for production */
+    /* display: none; */
+    /* END for production */
+    margin-top: 15px;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+.sbe_ccs_lower{
+    margin-top: 15px;
+}
+#sbe_cc_confirm_btn:disabled{
+    cursor: default;
+    opacity: .5;
+}
+/* media Query */
+@media only screen and (max-width: 600px) {
+    /*Big smartphones and smaller [426px -> 600px]*/
+    /* Consent Container */
+    .sbe_cookie_consent_cont {
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    /* settings overlay and container */
+    .sbe_cc_overlay{
+        padding: 10px;
+    }
+    .sbe_cc_settings_cont{
+        line-height: 1.2;
+        padding: 15px;
+        box-shadow: 0 6px 13px rgba(0, 0, 0, 0.122);
+    }
+    .sbe_cc_settings_cont>h2{
+        margin-bottom: 10px;
+    }
+    .sbe_cc_settings_cont>p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    .sbe_cc_s_cookie_cat_cont{
+        max-height: 250px;
+        overflow-y: scroll;
+    }
+    .sbe_ccs_close_btn{
+        top: 15px;
+        right: 15px;
+    }
+    .sbe_ccsccb_i_para{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .sbe_ccs_lower{
+       display: flex;
+       flex-direction: column;
+       
+    }
+}
+/* END Cookie Settings Container and overlay */
